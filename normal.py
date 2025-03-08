@@ -180,10 +180,8 @@ def paste_style(self, combination):
     # Later on, we'll write this svg to the clipboard, and send Ctrl+Shift+V to
     # Inkscape, to paste this style.
 
-    svg = '''
-          <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-          <svg>
-          '''
+    svg = ('<?xml version="1.0" encoding="UTF-8" standalone="no"?>'
+           '<svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">')
     # If a marker is applied, add its definition to the clipboard
     # Arrow styles stolen from tikz
     if ('marker-end' in style and style['marker-end'] != 'none') or \
@@ -198,7 +196,7 @@ def paste_style(self, combination):
                   <g transform="scale({(2.40 * w + 3.87)/(4.5*w)})">
                     <path
                        d="M -1.55415,2.0722 C -1.42464,1.29512 0,0.1295 0.38852,0 0,-0.1295 -1.42464,-1.29512 -1.55415,-2.0722"
-                       style="fill:none;stroke:#000000;stroke-width:{0.6};stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                       style="fill:none;stroke:context-stroke;stroke-width:{0.6};stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
                        inkscape:connector-curvature="0" />
                    </g>
                 </marker>
